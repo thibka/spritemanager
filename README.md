@@ -2,8 +2,6 @@
 Super basic sprite sheet management
 
 ## Usage
-
-### Simple
 ```html
 <div id="mySpriteContainer"></div>
 ```
