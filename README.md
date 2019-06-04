@@ -1,6 +1,19 @@
 # spritemanager
 Super basic sprite sheet management
 
+## Install
+### NPM
+```bash
+npm i @thibka/spritemanager
+```
+```javascript
+import SpriteManager from "@thibka/spritemanager"
+```
+### ES5
+```html
+<script src="SpriteManager-es5.js"></script>
+```
+
 ## Usage
 ```html
 <div id="mySpriteContainer"></div>
@@ -13,7 +26,7 @@ Super basic sprite sheet management
     background-position-x: 0;
     background-position-y: 0;
     background-repeat: no-repeat;
-    background-image: url(./img/click-sprite.png);
+    background-image: url(./img/mysprite.png);
     background-size: 370px 3700px;
 }
 ```
@@ -23,11 +36,14 @@ var mySprite = new SpriteManager({
         container: document.getElementById('mySpriteContainer'),
         fps: 25,
         frameHeight: 370,
-        height: 28120,
+        height: 3700,
         loop: true,             // Optional.
         loopDelay: 500,         // Optional. Delay between each loop
-        complete: function() {  // Optional. Callback when animation is done
-            console.log('Sprite animation is over');
+        beforeLoop: function() {
+            // Optional. Triggered before each iteration of a loop
+        },
+        complete: function() {  
+            // Optional. Triggered when animation is done (wheter in a loop or not)
         }
     }); 
 

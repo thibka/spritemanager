@@ -1,0 +1,22 @@
+{
+  "name": "@thibka/spritemanager",
+  "version": "1.0.0",
+  "description": "Super basic sprite sheet management",
+  "main": "SpriteManager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thibka/spritemanager.git"
+  },
+  "keywords": [
+    "sprite"
+  ],
+  "author": "thibka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thibka/spritemanager/issues"
+  },
+  "homepage": "https://github.com/thibka/spritemanager#readme"
+}

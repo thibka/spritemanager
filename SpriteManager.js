@@ -1,5 +1,5 @@
-(function(window, document, undefined) {
-    function SM(params) {
+export default class SM {
+    constructor(params) {
         this.container = params.container;
         this.fps = params.fps;
         this.frameHeight = params.frameHeight;
@@ -12,7 +12,7 @@
         this.beforeLoop = typeof params.beforeLoop == "function" ? params.beforeLoop : null;
     }
     
-    SM.prototype.play = function() {
+    play() {
         if (this.isPlaying) return;
         this.isPlaying = true;
         this.offset = 0;
@@ -34,6 +34,4 @@
             }
         }.bind(this), 1000 / this.fps);
     }
-
-    window.SpriteManager = SM;
-})(window, document);
+}
